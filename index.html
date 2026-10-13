@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amigos da Bola.bet</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#07131f;color:#eaf3fb;padding-bottom:78px}
+header{padding:25px 16px;background:linear-gradient(135deg,#081b2b,#0b5b43);position:sticky;top:0;z-index:5}
+header h1{margin:0;font-size:27px}.virtual{font-size:12px;background:#ffffff18;border:1px solid #ffffff2c;padding:6px 9px;border-radius:999px;display:inline-block;margin-top:8px}
+main{max-width:800px;margin:auto;padding:12px}.screen{display:none}.screen.active{display:block}
+.card{background:#102334;border:1px solid #20394c;border-radius:16px;padding:14px;margin:10px 0;box-shadow:0 7px 20px #0003}
+h2{margin:5px 0 12px}.balance{font-size:30px;font-weight:900;color:#64e6a6}.muted{color:#9eb2c2;font-size:13px}
+.match{padding:14px 0;border-bottom:1px solid #294052}.teams{font-weight:800;margin-bottom:9px}
+.odds{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.odd{background:#17364b;border:1px solid #28526b;color:#fff;border-radius:10px;padding:10px 5px;font-weight:800}.odd.selected{background:#10a56b;color:#061a12}
+button{border:0;border-radius:10px;padding:11px 13px;font-weight:800;cursor:pointer}input,select{width:100%;padding:12px;margin:5px 0 10px;border-radius:10px;border:1px solid #385064;background:#0d1d2b;color:#fff;font-size:16px}
+.primary{background:#10a56b;color:#fff;width:100%}.danger{background:#c73e4c;color:#fff}.ticket-item{background:#0d1d2b;border-radius:10px;padding:10px;margin:7px 0}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#091925;display:flex;overflow:auto;justify-content:space-around;padding:7px 2px}.nav button{background:transparent;color:#9db0bf;min-width:64px;font-size:11px}.nav b{display:block;font-size:19px}.nav .active{color:#67e7aa}
+.admin-grid{display:grid;gap:6px}.tag{display:inline-block;background:#143f31;color:#75efb4;padding:4px 7px;border-radius:7px;font-size:11px}
+</style></head><body>
+<header><h1>⚽ Amigos da Bola.bet</h1><span class="virtual">SIMULAÇÃO • créditos virtuais • sem dinheiro real</span></header>
+<main>
+<section class="screen active" id="home"><div class="card"><div class="muted">Saldo virtual</div><div class="balance" id="balance">10.000 pts</div></div><div class="card"><h2>🔥 Destaques</h2><p>Escolha seus palpites nos jogos disponíveis e monte seu bilhete.</p><button class="primary" data-go="games">Ver jogos e odds</button></div></section>
+<section class="screen" id="games"><h2>⚽ Jogos</h2><div id="matches"></div></section>
+<section class="screen" id="ticket"><h2>🎟️ Bilhete</h2><div class="card"><div id="ticketItems"><p class="muted">Nenhuma seleção.</p></div><label>Valor em pontos<input id="stake" type="number" min="1" value="100"></label><p>Odd total: <b id="totalOdd">1.00</b></p><p>Retorno possível: <b id="potential">100 pts</b></p><button class="primary" id="placeBet">Confirmar aposta virtual</button></div></section>
+<section class="screen" id="bets"><h2>📋 Minhas apostas</h2><div id="betsList"></div></section>
+<section class="screen" id="ranking"><h2>🏆 Ranking</h2><div class="card"><p>🥇 Você — <b id="rankBalance">10.000 pts</b></p><p class="muted">Na versão online, o ranking poderá comparar usuários.</p></div></section>
+<section class="screen" id="account"><h2>👤 Conta</h2><div class="card"><p><b>Conta demonstrativa</b></p><p>Saldo e apostas usam somente pontos fictícios.</p><span class="tag">Sem depósito</span> <span class="tag">Sem saque</span></div></section>
+<section class="screen" id="admin"><h2>⚙️ Admin</h2><div class="card"><h3>Novo jogo</h3><div class="admin-grid"><input id="homeTeam" placeholder="Time da casa"><input id="awayTeam" placeholder="Time visitante"><input id="date" type="datetime-local"><input id="oddHome" type="number" step=".01" placeholder="Odd Casa"><input id="oddDraw" type="number" step=".01" placeholder="Odd Empate"><input id="oddAway" type="number" step=".01" placeholder="Odd Fora"><button class="primary" id="addMatch">Cadastrar jogo</button></div></div><div class="card"><h3>Gerenciar jogos</h3><div id="adminMatches"></div></div></section>
+</main>
+<nav class="nav"><button class="active" data-go="home"><b>⌂</b>Início</button><button data-go="games"><b>⚽</b>Jogos</button><button data-go="ticket"><b>🎟️</b>Bilhete</button><button data-go="bets"><b>📋</b>Apostas</button><button data-go="ranking"><b>🏆</b>Ranking</button><button data-go="account"><b>👤</b>Conta</button><button data-go="admin"><b>⚙️</b>Admin</button></nav>
+<script src="app.js"></script></body></html>
